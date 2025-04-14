@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example - Whatsapp</title>
+</head>
+<body>
+    <div id="chat-widget"></div>
+</body>
+<script src="../dist/chat-widget.js"></script>
+<script>
+    const chatWidget = new ChatWidget({ type: 'whatsapp', initialText:'Hello', phoneNumber: '+6599821872' });
+    chatWidget.show();
+</script>
+</html>

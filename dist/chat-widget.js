@@ -3,6 +3,10 @@
   var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
   var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
 
+  // src/constants.ts
+  var WHATSAPP_URL = "https://api.whatsapp.com/send?";
+  var TELEGRAM_URL = "https://t.me/";
+
   // src/ChatWidget.tsx
   var CHAT_TYPES = {
     MESSENGER: "messenger",
@@ -12,9 +16,11 @@
   var ChatWidget = class {
     constructor(options) {
       __publicField(this, "chatType");
-      __publicField(this, "url");
+      __publicField(this, "initialText");
+      __publicField(this, "phoneNumber");
       this.chatType = options.type;
-      this.url = options.url;
+      this.initialText = options.initialText;
+      this.phoneNumber = options.phoneNumber;
     }
     show() {
       try {
@@ -36,8 +42,7 @@
       const chatWidgetBtn = document.getElementById("chat-widget-button");
       if (chatWidgetBtn) {
         chatWidgetBtn.onclick = () => {
-          console.log("hello");
-          window == null ? void 0 : window.open(this.url, "_blank").focus();
+          window == null ? void 0 : window.open(this.getChatURL(), "_blank");
         };
       }
     }
@@ -55,6 +60,18 @@
           return "";
         case CHAT_TYPES.TELEGRAM:
           return "";
+        default:
+          return "";
+      }
+    }
+    getChatURL() {
+      switch (this.chatType) {
+        case CHAT_TYPES.WHATSAPP:
+          return `${WHATSAPP_URL}phone=${this.phoneNumber}&text=${this.initialText}`;
+        case CHAT_TYPES.MESSENGER:
+          return "";
+        case CHAT_TYPES.TELEGRAM:
+          return `${TELEGRAM_URL}${this.phoneNumber}?text=${this.initialText}`;
         default:
           return "";
       }

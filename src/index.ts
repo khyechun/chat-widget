@@ -1,3 +1,3 @@
 import ChatWidget from "./ChatWidget";
 
-(window as any).ChatWidget = ChatWidget
+(window as any).ChatWidget = ChatWidget;
