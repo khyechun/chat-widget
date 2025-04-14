@@ -1,3 +1,3 @@
-import { ChatWidget } from "./ChatWidget";
+import ChatWidget from "./ChatWidget";
 
-export default ChatWidget;
+(window as any).ChatWidget = ChatWidget
