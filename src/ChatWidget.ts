@@ -1,4 +1,4 @@
-import { TELEGRAM_URL, WHATSAPP_URL } from "./constants";
+import { MESSENGER_URL, TELEGRAM_URL, WHATSAPP_URL } from "./constants";
 
 const CHAT_TYPES = {
   MESSENGER: 'messenger',
@@ -8,15 +8,28 @@ const CHAT_TYPES = {
   
 export type ChatType = typeof CHAT_TYPES[keyof typeof CHAT_TYPES];
   
+// TODO: OOP properly later
 export default class ChatWidget {
   chatType: ChatType;
-  initialText: string;
+  text: string;
   phoneNumber: string;
+  pageName: string;
 
-  constructor(options: { type: ChatType, initialText: string, phoneNumber: string }) {
+  constructor(options: { type: ChatType, text?: string, phoneNumber?: string, pageName?: string }) {
     this.chatType = options.type;
-    this.initialText = options.initialText;
-    this.phoneNumber = options.phoneNumber;
+
+    if(options.text){
+      this.text = options.text;
+    }
+    
+    // ew 1
+    if (options.phoneNumber){
+      this.phoneNumber = options.phoneNumber
+    }
+    // ew 2
+    if (options.pageName){
+      this.pageName = options.pageName;
+    }
   }
 
   show() {
@@ -67,11 +80,11 @@ export default class ChatWidget {
   getChatURL(): string {
     switch(this.chatType) {
       case CHAT_TYPES.WHATSAPP:
-        return `${WHATSAPP_URL}phone=${this.phoneNumber}&text=${this.initialText}`
+        return `${WHATSAPP_URL}phone=${this.phoneNumber}&text=${this.text}`
       case CHAT_TYPES.MESSENGER:
-        return '';
+        return `${MESSENGER_URL}${this.pageName}?text=${this.text}`;
       case CHAT_TYPES.TELEGRAM:
-        return `${TELEGRAM_URL}${this.phoneNumber}?text=${this.initialText}`;
+        return `${TELEGRAM_URL}${this.phoneNumber}?text=${this.text}`;
       default:
         return '';
     }
