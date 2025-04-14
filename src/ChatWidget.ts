@@ -6,7 +6,7 @@ const CHAT_TYPES = {
   
   export type ChatType = typeof CHAT_TYPES[keyof typeof CHAT_TYPES];
   
-  export  class ChatWidget {
+  export class ChatWidget {
     chatType: ChatType;
   
     constructor(chatType: ChatType) {
