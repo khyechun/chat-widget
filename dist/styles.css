@@ -14,7 +14,7 @@
   transition: 0.4s background-position;
   right: 24px;
   bottom: 24px;
-  position: absolute;
+  position: fixed;
 }
 
 #chat-widget-button:hover {
@@ -36,7 +36,7 @@
   padding-bottom: 44px;
   box-sizing: border-box;
   transition: 0.4s;
-  position: absolute;
+  position: fixed;
   bottom: 82px;
   right: 24px;
 }
@@ -88,7 +88,7 @@
 }
 
 #chat-widget-close-button {
-  position: absolute;
+  position: fixed;
   right: 12px;
   top: 12px;
   cursor: pointer;
