@@ -60,7 +60,7 @@ export default class ChatWidget {
                     <img width="20px" height="20px" src="https://static.cdnlogo.com/logos/w/29/whatsapp-icon.svg">
                     <p style="font-size:14px; margin:0;">WhatsApp</p>
                   </div>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#697481"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#697481"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
                 </div>
                 `
               : ""
@@ -73,7 +73,7 @@ export default class ChatWidget {
                     <img width="20px" height="20px" src="https://static.cdnlogo.com/logos/f/52/facebook-messenger.svg">
                     <p style="font-size:14px; margin:0;">Messenger</p>
                   </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#697481"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#697481"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
                 </div>
                 `
               : ""
@@ -86,7 +86,7 @@ export default class ChatWidget {
                   <img width="24px" height="24px" src="https://static.cdnlogo.com/logos/l/29/line-messenger.svg">                        
                   <p style="font-size:14px; margin:0;">Line</p>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#697481"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#697481"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
               </div>`
              : ""
           }
@@ -98,7 +98,7 @@ export default class ChatWidget {
                     <img width="20px" height="20px" src="https://static.cdnlogo.com/logos/v/17/viber.svg"></a>   
                     <p style="font-size:14px; margin:0;">Viber</p>                   
                   </div>
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#697481"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#697481"><path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z"/></svg>
                 </div>`
               : ""
           }
