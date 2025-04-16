@@ -46,11 +46,11 @@ export default class ChatWidget {
         <div id="chat-widget-close-button">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
         </div>
-        <p style="color:#FFF;font-size:20px;margin:0;">Hello!</p>
-        <p style="color:#FFFFFF;font-size:20px;margin:0;">Contact us through</p>
+        <p style="color:#FFF;font-size:18px;margin:0;">Hello!</p>
+        <p style="color:#FFFFFF;font-size:18px;margin:0;">Contact us through</p>
         <div id="chat-widget-chats">
           <div style="padding:12px">
-            <p style="color:#697481;font-size:16px;margin:0;">Chat via</p>
+            <p style="color:#697481;font-size:14px;margin:0;">Chat via</p>
           </div>
           ${
             this.whatsappUrl
