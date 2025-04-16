@@ -1,0 +1,111 @@
+#chat-widget {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
+
+#chat-widget-button {
+  background: linear-gradient(
+    90deg,
+    rgba(37, 107, 246, 1) 0%,
+    rgba(0, 65, 194, 1) 100%
+  );
+  width: 48px;
+  height: 48px;
+  border-radius: 80% 12px 80% 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.4s background-position;
+  right: -232px;
+  position: relative;
+}
+
+#chat-widget-button:hover {
+  background-position: -48px;
+}
+
+#chat-widget-popup {
+  background: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 280px;
+  max-width: 100%;
+  min-height: 260px;
+  position: relative;
+  bottom: 10px;
+  border-radius: 8px;
+  position: relative; /* needed for absolute children like ::before */
+  z-index: 1; /* content should be above the overlay */
+  font-family: sans-serif;
+  padding: 24px;
+  padding-bottom: 44px;
+  box-sizing: border-box;
+  transition: opacity 0.4s;
+  position: relative;
+}
+
+.chat-widget-popup--opened {
+  opacity: 1;
+}
+
+.chat-widget-popup--closed {
+  pointer-events: none;
+  opacity: 0;
+}
+
+#chat-widget-popup:before {
+  content: "";
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  display: block;
+  position: absolute;
+  height: 160px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #256bf6;
+  z-index: -1; /* make sure it's *under* the content */
+}
+
+#chat-widget-chats {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-top: 24px;
+}
+
+.messaging-channel-container {
+  padding: 16px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+  cursor: pointer;
+  border-top: 1px solid #d5d9de;
+  transition: 0.1s background-color;
+}
+
+.messaging-channel-container:hover {
+  background-color: #f4f6f8;
+}
+
+#chat-widget-close-button {
+  position:absolute;
+  right:12px;
+  top:12px;
+  cursor: pointer;
+  padding:4px;
+  border-radius:100%;
+  width: 24px;
+  height:24px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s;
+}
+
+#chat-widget-close-button:hover {
+  background-color: #0041C2;
+}
