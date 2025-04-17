@@ -1,5 +1,6 @@
 #chat-widget {
   z-index: 9999;
+  position: relative;
 }
 
 #chat-widget-button {
